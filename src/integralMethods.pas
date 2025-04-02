@@ -5,13 +5,10 @@ interface
 uses
   integralTypes;
 
-// Метод левых прямоугольников
 function LeftRectangleMethod(f: TFunction; a, b: Real; n: Int64): Real;
 
-// Метод трапеций
 function TrapezoidMethod(f: TFunction; a, b: Real; n: Int64): Real;
 
-// Вычисление интеграла с заданной точностью
 function CalculateWithPrecision(method: TIntegrationMethod; f: TFunction; a, b: Real; eps: Real; var iterations: Int64): Real;
 
 implementation

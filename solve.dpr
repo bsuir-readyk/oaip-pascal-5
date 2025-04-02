@@ -69,7 +69,4 @@ begin
   end;
   
   PrintTableFooter;
-  
-  WriteLn('Нажмите Enter для завершения...');
-  ReadLn;
 end.

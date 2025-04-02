@@ -19,7 +19,6 @@ function Function3(x: Real): Real;
 // Функция 4: (ln(x+2))/x
 function Function4(x: Real): Real;
 
-// Функция-селектор для выбора нужной функции по номеру
 function GetFunction(functionNumber: Int64): TFunction;
 
 implementation
