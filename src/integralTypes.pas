@@ -1,10 +1,12 @@
 unit integralTypes;
 
+{$mode objfpc}
+
 interface
 
 type
   TFunction = function(x: Real): Real;
-  TIntegrationMethod = function(f: TFunction; a, b: Real; n: Integer): Real;
+  TIntegrationMethod = function(f: TFunction; a, b: Real; n: Int64): Real;
 
 const
   // Границы интегрирования

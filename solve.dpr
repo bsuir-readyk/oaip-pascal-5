@@ -1,5 +1,7 @@
 program solve;
 
+{ MODE $DELPHI }
+
 uses
   SysUtils, Math,
   integralTypes in 'src/integralTypes.pas',
@@ -10,8 +12,8 @@ uses
 var
   f: TFunction;
   value1, value2, value3, value4: Real;
-  n1, n2, n3, n4: Integer;
-  i: Integer;
+  n1, n2, n3, n4: Int64;
+  i: Int64;
 
 begin
   PrintTableHeader;

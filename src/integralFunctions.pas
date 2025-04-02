@@ -1,5 +1,7 @@
 unit integralFunctions;
 
+{$mode objfpc}
+
 interface
 
 uses
@@ -18,38 +20,38 @@ function Function3(x: Real): Real;
 function Function4(x: Real): Real;
 
 // Функция-селектор для выбора нужной функции по номеру
-function GetFunction(functionNumber: Integer): TFunction;
+function GetFunction(functionNumber: Int64): TFunction;
 
 implementation
 
 function Function1(x: Real): Real;
 begin
-  Result := Sqrt(x*x + 5) / (2*x + Sqrt(x*x + 0.5));
+  Function1 := Sqrt(x*x + 5) / (2*x + Sqrt(x*x + 0.5));
 end;
 
 function Function2(x: Real): Real;
 begin
-  Result := Sin(2*x + 0.5) / (2 + Cos(x*x + 1));
+  Function2 := Sin(2*x + 0.5) / (2 + Cos(x*x + 1));
 end;
 
 function Function3(x: Real): Real;
 begin
-  Result := 1 / Sqrt(2*x*x + 1);
+  Function3 := 1 / Sqrt(2*x*x + 1);
 end;
 
 function Function4(x: Real): Real;
 begin
-  Result := Ln(x + 2) / x;
+  Function4 := Ln(x + 2) / x;
 end;
 
-function GetFunction(functionNumber: Integer): TFunction;
+function GetFunction(functionNumber: Int64): TFunction;
 begin
   case functionNumber of
-    1: Result := @Function1;
-    2: Result := @Function2;
-    3: Result := @Function3;
-    4: Result := @Function4;
-    else Result := nil;
+    1: GetFunction := @Function1;
+    2: GetFunction := @Function2;
+    3: GetFunction := @Function3;
+    4: GetFunction := @Function4;
+    else GetFunction := nil;
   end;
 end;
 
